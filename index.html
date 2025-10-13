@@ -3,35 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Blog</title>
+  <title>AI Blogs</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f4f4f9;
+      color: #333;
       margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
       padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
     }
     h1 {
-      color: #333;
+      margin-top: 0;
     }
     ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
     }
     li {
-      margin-bottom: 15px;
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 10px 0;
     }
     a {
       text-decoration: none;
-      color: #1a73e8;
+      color: #4CAF50;
       font-weight: bold;
     }
     a:hover {
       text-decoration: underline;
     }
-    .date {
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 { color: #2c3e50; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 20px; }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      font-size: 18px;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Mis Blogs</h1>
+  <ul id="blog-list"></ul>
 
+  <script>
+    // Lista de blogs: cada objeto tiene 'archivo' y 'titulo'
+    const blogs = [
+      { archivo: "post/ultimos-avances-inteligencia-artificial.html", titulo: "Últimos avances en inteligencia artificial: Innovaciones de 2024" },
+      // Aquí puedes añadir más blogs manualmente
+      // { archivo: "post/otro-blog.html", titulo: "Título de otro blog" },
+    ];
+
+    const list = document.getElementById("blog-list");
+
+    blogs.forEach(blog => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = blog.archivo;
+      a.textContent = blog.titulo;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
